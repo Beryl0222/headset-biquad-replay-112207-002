@@ -30,8 +30,8 @@ def generate(root, frames=480000, channels=8):
     channels_by_group = {'cancel': roles[:4], 'side': roles[4:]} if channels == 8 else {'cancel': roles[:4]}
     events = [
         {'type': 'switch', 'group': 'cancel', 'frame': 1601, 'version': 'b', 'proposal': 'trial'},
-        {'type': 'seal', 'group': 'cancel', 'frame': 1540, 'file': 'played-a'},
         {'type': 'data', 'group': 'cancel', 'frame': 1728},
+        {'type': 'seal', 'group': 'cancel', 'frame': 1680, 'file': 'played-a'},
         {'type': 'silence', 'channel': 'ref-right', 'start': 1536, 'stop': 1696},
         {'type': 'switch', 'group': 'cancel', 'frame': 1860, 'version': 'b', 'proposal': 'release'},
         {'type': 'data', 'group': 'cancel', 'frame': 2496},
